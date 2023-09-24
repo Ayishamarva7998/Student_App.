@@ -58,7 +58,7 @@ class _EditScreen extends State<EditScreen> {
    getAllStudents();
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Colors.black,
+        backgroundColor: Color.fromARGB(255, 241, 104, 150),
         body: SingleChildScrollView(
           child: Container(
             height: MediaQuery.of(context).size.height,
@@ -72,7 +72,7 @@ class _EditScreen extends State<EditScreen> {
                       Text(
                         'S T U D E N T',
                         style: TextStyle(
-                          color: Colors.white,
+                          color: Colors.black,
                           fontSize: 30,
                           fontWeight: FontWeight.bold,
                         ),
@@ -97,7 +97,7 @@ class _EditScreen extends State<EditScreen> {
                             ElevatedButton(
                                 style: ButtonStyle(
                                     backgroundColor:
-                                        MaterialStatePropertyAll(Colors.black)),
+                                        MaterialStatePropertyAll(Colors.pink)),
                                 onPressed: () {
                                   fromgallery();
                                 },
@@ -105,7 +105,7 @@ class _EditScreen extends State<EditScreen> {
                             ElevatedButton(
                                 style: ButtonStyle(
                                     backgroundColor:
-                                        MaterialStatePropertyAll(Colors.black)),
+                                        MaterialStatePropertyAll(Colors.pink)),
                                 onPressed: () {
                                   fromcam();
                                 },
@@ -153,6 +153,8 @@ class _EditScreen extends State<EditScreen> {
                               border: OutlineInputBorder(),
                               hintText: 'N U M B E R',
                             ),
+                            
+                          maxLength: 10,
                           ),
                         ),
 
@@ -162,7 +164,7 @@ class _EditScreen extends State<EditScreen> {
                             ElevatedButton(
                               style: ButtonStyle(
                                   backgroundColor:
-                                      MaterialStatePropertyAll(Colors.black)),
+                                      MaterialStatePropertyAll(Colors.blue)),
                               onPressed: () {
                                 update();
                               },

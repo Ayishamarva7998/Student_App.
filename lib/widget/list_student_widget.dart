@@ -42,7 +42,7 @@ class _ListStudentWidgetState extends State<ListStudentWidget> {
                         },
                         icon: const Icon(
                           Icons.delete,
-                          color: const Color.fromARGB(255, 158, 52, 45),
+                          color: Color.fromARGB(255, 221, 38, 25),
 
                         )
                         ),
@@ -69,7 +69,8 @@ class _ListStudentWidgetState extends State<ListStudentWidget> {
       floatingActionButton: FloatingActionButton(onPressed: () {
         Navigator.push(context,
             MaterialPageRoute(builder: (context) => AddStudentWidget()));
-      }),
+      },child: Icon(Icons.add),
+      backgroundColor: Color.fromARGB(255, 245, 74, 6),),
     );
   }
 }

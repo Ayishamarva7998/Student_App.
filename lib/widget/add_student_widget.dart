@@ -20,6 +20,7 @@ class _AddStudentWidgetState extends State<AddStudentWidget> {
   final _ageController = TextEditingController();
   final _classController = TextEditingController();
   final _numberController = TextEditingController();
+  
 
 
   final ImagePicker imagePicker = ImagePicker();
@@ -33,7 +34,11 @@ class _AddStudentWidgetState extends State<AddStudentWidget> {
       child: Scaffold(
         appBar: AppBar(
           title: Text('Welcome'),
-          backgroundColor: Colors.red,
+          actions: [
+            IconButton(onPressed: (){}, icon: Icon(Icons.search))
+          ],
+          backgroundColor: Color.fromARGB(255, 224, 31, 92),
+          
         ),
         body: Center(
           child: Padding(
@@ -45,7 +50,7 @@ class _AddStudentWidgetState extends State<AddStudentWidget> {
                 },
                 child: CircleAvatar(
                     radius: 50,
-                    backgroundColor: const Color.fromARGB(255, 184, 144, 144),
+                    backgroundColor: Color.fromARGB(255, 255, 87, 15),
                     child: pickedimage == null
                         ? Icon(Icons.camera)
                         : ClipOval(
@@ -98,7 +103,10 @@ class _AddStudentWidgetState extends State<AddStudentWidget> {
                   labelText: 'Number',
                   prefixIcon: Icon(Icons.phone),
                   prefixText: '+91',
+                  
+                  
                 ),
+                maxLength: 10,
                 inputFormatters: [
                   FilteringTextInputFormatter.allow(
                       RegExp(r'[0-9]')), // Allow only numeric characters
