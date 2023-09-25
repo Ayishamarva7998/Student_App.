@@ -222,7 +222,7 @@ class _EditScreen extends State<EditScreen> {
       behavior: SnackBarBehavior.floating,
     ));
     Navigator.of(context).push(MaterialPageRoute(
-      builder: (context) =>ListStudentWidget(),
+      builder: (context) =>ListStudent(),
     ));
   }
 

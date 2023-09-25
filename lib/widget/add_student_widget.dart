@@ -34,9 +34,7 @@ class _AddStudentWidgetState extends State<AddStudentWidget> {
       child: Scaffold(
         appBar: AppBar(
           title: Text('Welcome'),
-          actions: [
-            IconButton(onPressed: (){}, icon: Icon(Icons.search))
-          ],
+          
           backgroundColor: Color.fromARGB(255, 224, 31, 92),
           
         ),
@@ -149,7 +147,7 @@ class _AddStudentWidgetState extends State<AddStudentWidget> {
     addStudent(_student);
     Navigator.push(
       context,
-      MaterialPageRoute(builder: (context) => ListStudentWidget()),
+      MaterialPageRoute(builder: (context) => ListStudent()),
     );
   }
 
